@@ -1,0 +1,29 @@
+﻿<Application x:Class="ZookeeperAdministrator.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:ZookeeperAdministrator" 
+             xmlns:converters="clr-namespace:ZookeeperAdministrator.Converters"
+             StartupUri="ZkMainWindow.xaml">
+    <Application.Resources>
+        <!--<BooleanToVisibilityConverter x:Key="BooleanToVisibilityConverter"/>-->
+        <!--<ResourceDictionary.MergedDictionaries>
+            <ResourceDictionary>
+                <BooleanToVisibilityConverter x:Key="BooleanToVisibilityConverter"/>
+                <converters:BorderClipConverter x:Key="BorderClipConverter"/>
+            </ResourceDictionary>
+        </ResourceDictionary.MergedDictionaries>-->
+
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <!-- Material Design Themes -->
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Light.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Defaults.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignColors;component/Themes/Recommended/Primary/MaterialDesignColor.Blue.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignColors;component/Themes/Recommended/Accent/MaterialDesignColor.DeepPurple.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignExtensions;component/Themes/TabControlTemplates.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+            <BooleanToVisibilityConverter x:Key="BoolToVis"/>
+            <converters:InverseBooleanConverter x:Key="InverseBoolToVisibility" />
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>
