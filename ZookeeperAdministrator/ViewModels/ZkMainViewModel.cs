@@ -62,7 +62,7 @@ namespace ZookeeperAdministrator.ViewModels
                 {
                     //FileName = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "nc111nt\\nc.exe"),
                     FileName = "cmd.exe",
-                    WorkingDirectory = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "nc111nt\\"),
+                    WorkingDirectory = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "nctool\\"),
                     Arguments = $"/c \"{command} {Hostname} {Port} \r\n\"",
                     UseShellExecute = false,
                     RedirectStandardInput = true,

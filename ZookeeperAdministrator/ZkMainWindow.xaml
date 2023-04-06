@@ -37,7 +37,7 @@
         <TabItem Header="ruok">
             <StackPanel Margin="8">
                     <Button Content="执行" Command="{Binding ExecuteCommand}" CommandParameter="echo ruok | nc "
-                        IsEnabled="{Binding IsRunning, Converter={StaticResource InverseBoolToVisibility}}"/>
+                        IsEnabled="{Binding IsRunning, Converter={StaticResource InverseBoolToVisibility}}" Cursor="Hand"/>
                 <TextBox Text="{Binding Output}" TextWrapping="Wrap" IsReadOnly="True"
                          VerticalScrollBarVisibility="Auto" Margin="0,8,0,0" Height="400"/>
             </StackPanel>

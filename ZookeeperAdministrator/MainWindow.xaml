@@ -27,16 +27,16 @@
             <Button Content="ruok" Command="{Binding RuokCommand}" Margin="0 0 0 8" />
             <Button Content="srvr" Command="{Binding SrvrCommand}" Margin="0 0 0 8" />
             <Button Content="conf" Command="{Binding ConfCommand}" Margin="0 0 0 8" />
-            <Button Content="stat" Command="{Binding StatCommand}" Margin="0 0 0 8" />
+            <Button Content="stat" Command="{Binding StatCommand}" Margin="0 0 0 8" Cursor="Hand" />
             <Button Content="mntr" Command="{Binding MntrCommand}" Margin="0 0 0 8" />
             <materialDesign:Card Padding="5" Margin="5" HorizontalAlignment="Center" Height="90">
-                <TextBlock Style="{DynamicResource MaterialDesignHeadline6TextBlock}" TextWrapping="Wrap" Margin="1" >Material Design 执行界面,后台不执行</TextBlock>
+                <TextBlock Style="{DynamicResource MaterialDesignHeadline6TextBlock}" TextWrapping="Wrap" Margin="1" >Material Design 执行界面</TextBlock>
             </materialDesign:Card>
         </StackPanel>
 
         <StackPanel Margin="267,16,16,16">
             <TextBlock Text="Output:" FontWeight="Bold" Margin="0 0 0 8" />
-            <ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Disabled">
+            <ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Disabled" Height="246">
                 <TextBlock TextWrapping="Wrap" Text="{Binding Output}" />
             </ScrollViewer>
         </StackPanel>
