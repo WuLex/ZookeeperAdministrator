@@ -23,7 +23,11 @@ namespace ZookeeperAdministrator.ViewModels
         public ICommand ConfCommand { get; private set; }
         public ICommand StatCommand { get; private set; }
         public ICommand MntrCommand { get; private set; }
+        public ICommand WchsCommand { get; private set; }
+        public ICommand DumpCommand { get; private set; }
 
+        // 定义 ShowOtherWindowCommand 命令属性
+        public ICommand ShowOtherWindowCommand => new RelayCommand(ShowOtherWindow);
         public MainViewModel()
         {
             RuokCommand = new RelayCommand(() => ExecuteCommand("ruok"));
@@ -31,6 +35,8 @@ namespace ZookeeperAdministrator.ViewModels
             ConfCommand = new RelayCommand(() => ExecuteCommand("conf"));
             StatCommand = new RelayCommand(() => ExecuteCommand("stat"));
             MntrCommand = new RelayCommand(() => ExecuteCommand("mntr"));
+            WchsCommand = new RelayCommand(() => ExecuteCommand("wchs"));
+            DumpCommand = new RelayCommand(() => ExecuteCommand("dump"));
         }
 
         private void ExecuteCommand(string cmd)
@@ -74,13 +80,22 @@ namespace ZookeeperAdministrator.ViewModels
             {
                 Output=ex.Message;
             }
-        }
-      
+        } 
         public event PropertyChangedEventHandler PropertyChanged;
 
         private void OnPropertyChanged([CallerMemberName] string propertyName = null)
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+        }
+
+        // 打开另一个窗体的方法
+        private void ShowOtherWindow()
+        {
+            // 创建另一个窗体对象
+            ZkMainWindow otherWindow = new ZkMainWindow();
+
+            // 显示另一个窗体
+            otherWindow.Show();
         }
     }
 
